@@ -30,7 +30,26 @@ int main()
     }
     sv=sv+var+"!";
     n=sv.length();
-    
-
+    for (int i=0,i<n+4,i++)
+    {
+        cout<<"*";
+    }
+    cout<<"\n* ";
+    for(int i=0,i<n,i++)
+    {
+        cout<<" ";
+    }
+    cout<<" *\n* ";
+    cout<<sv<<" *";
+    cout<<"\n* ";
+    for(int i=0,i<n,i++)
+    {
+        cout<<" ";
+    }
+    cout<<"*\n";
+    for(int i=0,i<n+4,i++)
+    {
+        cout<<"*";
+    }
     return 0;
 }
