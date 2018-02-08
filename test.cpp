@@ -4,9 +4,9 @@
 
 #include "string.h"
 
-using namespace std;
+using std::cout; using std::endl; using std::string; using std::cin;
 
-
+//heloooooo
 
 int main()
 
@@ -20,33 +20,25 @@ int main()
 
     int n=var.length();
 
-    char a[2];
-
-    a[0]=var[n-2];
-
-    a[1]=var[n-1];
-
-    string sv;
-
-    if(a[1]=='a'||a[1]=='e')
+    if(var[n-1]=='a'||var[n-1]=='e')
 
     {
 
-        sv="Sveika, ";
+        var="Sveika, " + var+"!";
 
     }
 
-    else if(a[0]=='a')
+    else if(var[n-2]=='a' && var[n-1]=='s')
 
     {
 
         var[n-1]='i';
 
-        sv="Sveikas, ";
+        var="Sveikas, "+var+"!";
 
     }
 
-    else
+    else if (var[n-2]=='u' && var[n-1]=='s')
 
     {
 
@@ -54,13 +46,20 @@ int main()
 
         var[n-1]='u';
 
-        sv="Sveikas, ";
+        var="Sveikas, "+var+"!";
 
     }
+    else if (var[n-2]=='i'&&var[n-1]=='s')
+    {
+        var[n-1]='!';
+        var="Sveikas, "+var;
+    }
+    else
+    {
+        var="Sveikas, "+var+"!";
+    }
 
-    sv=sv+var+"!";
-
-    n=sv.length();
+    n=var.length();
 
     for (int i=0;i<n+4;i++)
 
@@ -82,7 +81,7 @@ int main()
 
     cout<<" *\n* ";
 
-    cout<<sv<<" *";
+    cout<<var<<" *";
 
     cout<<"\n* ";
 
